@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Data calculator</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nanum+Gothic'><link rel="stylesheet" href="./style.css">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>Booking Form HTML Template</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!-- Custom stlylesheet -->
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+</head>
+<body>
+
+<div  class="form">
+  <div class="elem-group">
+   
+  
+  <div class="elem-group inlined">
+    <label for="checkin-date">Початкова дата</label>
+    <input class= "data-input" type="date" step=1 id="checkin-date" min="1977-01-01" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Кінцева дата</label>
+    <input class= "data-input" type="date" step=1 id="checkout-date" max="2030-01-01" name="checkout" disabled>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Фільтр</label>
+    <select id="preset-selection" name="preset_preference" required>
+        <option></option>
+        <option>Тиждень</option>
+        <option>Місяць</option>
+    </select>
+    </div>
+    <div class="elem-group">
+    <label for="room-selection">Фільтр</label>
+    <select id="DaysType" name="room_preference" required>
+        <option>Всі дні</option>
+        <option>Будні дні</option>
+        <option>Вихідні дні</option>
+    </select>
+    </div>
+    <div class="elem-group">
+    <label for="room-selection">Величина розрахунку</label>
+    <select id="Dimension" name="room_preference" required>
+        <option>Порахувати кількість днів</option>
+        <option>Порахувати кількість годин</option>
+        <option>Порахувати кількість хвилин</option>
+        <option>Порахувати кількість секунд</option>
+    </select>
+  </div>
+  <hr>
+  <button id= "CalculateButton" type="submit">Розрахувати</button>
+</div>
+  <div  id="CalculationHistory" class="elem-group"> 
+        <h2 class="label">Попередні результати</h2>
+           <table class="history">
+              <thead>
+                 <tr>
+                   <th>Проміжок</th>
+                   <th>Результат</th>
+                   </tr>
+               </thead>
+               <tbody> </tbody>
+           </table>
+    </div>
+  </div>
+  <script  src="./script1.js"></script>
+
+</body>
+</html>
